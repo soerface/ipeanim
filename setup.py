@@ -11,6 +11,9 @@ setup(
     project_urls={
         'Source Code': github_url,
         'Bug Tracker': f'{github_url}/issues',
-        'Documentation': 'https://ipeanim.readthedocs.io',
+        'Documentation': f'{github_url}/blob/master/README.md',
     },
+    scripts=[
+        'bin/ipeanim',
+    ]
 )
