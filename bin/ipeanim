@@ -36,15 +36,12 @@ def main():
         sys.exit(1)
     root = tree.getroot()
     i = len(root.find('page').findall('view'))
-    ipe_tmp_file = out_dir / f'tmp.ipe'
     while i > 0:
         target_file = out_dir / f'{i}.{args.format}'
-        tree.write(ipe_tmp_file)
-        cmd = ['iperender', f'-{args.format}', '-view', str(i)] + unknown_args + [ipe_tmp_file, target_file]
+        cmd = ['iperender', f'-{args.format}', '-view', str(i)] + unknown_args + [path, target_file]
         print(' '.join(map(str, cmd)))
         subprocess.run(cmd)
         i -= 1
-    # ipe_tmp_file.unlink()
 
 
 if __name__ == '__main__':
