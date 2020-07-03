@@ -1,20 +1,26 @@
 
 # ipeanim
 
-[![Documentation Status](https://readthedocs.org/projects/ipeanim/badge/?version=latest)](https://ipeanim.readthedocs.io/en/latest/?badge=latest)
-[![Tests Status](https://github.com/soerface/ipeanim/workflows/CI/badge.svg)](https://github.com/soerface/ipeanim/actions?query=workflow%3ACI)
+`ipeanim` is a thin wrapper around `iperender`. It allows you to render
+multiple images from a single .ipe file.
 
-- Documentation: https://ipeanim.readthedocs.io
-- PyPI: https://pypi.org/project/ipeanim
+Ipe is a free drawing editor created by Otfried Cheong: http://ipe.otfried.org/
 
-## Getting started
+[ipeanim on PyPI](https://pypi.org/project/ipeanim)
 
-Installation via pip:
+## Installation
+
+Install Ipe and libipe from http://ipe.otfried.org/
+
+Install this package either via pip:
 
     pip install ipeanim
     
-Using the fizzbuzz:
+Or just download the "ipeanim" file from here and put it in your path. It only requires python 3.7+.
+    
+## Usage
 
-    >>> from ipeanim.fizzbuzz import fizzbuzz
-    >>> fizzbuzz(35)
-    'fizzbuzz'
+    $ ipeanim path/to/file.ipe
+    $ ipeanim --help
+
+[![Tests Status](https://github.com/soerface/ipeanim/workflows/CI/badge.svg)](https://github.com/soerface/ipeanim/actions?query=workflow%3ACI)
