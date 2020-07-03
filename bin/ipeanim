@@ -9,7 +9,7 @@ from argparse import ArgumentParser
 def main():
     parser = ArgumentParser(description='''
         ipeanim uses iperender to create multiple renderings of a single .ipe file.
-        It takes all visible layers and renders them, and then hides each layer consecutively.
+        It renders each view to a single image file.
 
         Any extra arguments will be passed to the iperender command.''')
     parser.add_argument('path', type=Path)
